@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const Title = ()=>{
+  let title = "Hola mundo";
+  return <h1>{title}</h1>
+}
+
+const Subtitle = ()=>{
+  let subTitle = "App de prueba"
+  return <h2>{subTitle}</h2>
+}
+
+const App = () =>{
+  
+  var hoy = new Date();
+  var fecha = hoy.getDate() + '-' + ( hoy.getMonth() + 1 ) + '-' + hoy.getFullYear();
+  var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Title />
+      <Subtitle />
+      {fecha}
+      <br></br>
+      {hora}
     </div>
   );
 }
